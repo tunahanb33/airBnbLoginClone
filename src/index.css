@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .text-with-lines {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        padding: 0 24px; /* Bu değer çizgilerin metinden uzaklığını ayarlar */
+      }
+      
+      .text-with-lines::before,
+      .text-with-lines::after {
+        content: "" !important;
+        display: block !important;
+        flex: 1; /* Eşit uzunlukta esneklik sağlar */
+        height: 1px !important;
+        background-color: rgb(221, 221, 221) !important;
+      }
+      
+      .text-with-lines::before {
+        margin-right: 16px !important;
+      }
+      
+      .text-with-lines::after {
+        margin-left: 16px !important;
+      }
+      
+}
