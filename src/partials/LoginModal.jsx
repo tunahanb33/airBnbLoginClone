@@ -12,6 +12,7 @@ function LoginModal() {
       const { name, value } = e.target;
       setFormData(prev => ({...prev, [name]: value}));
     }
+    
     const handleSubmit = (e) => {
       e.preventDefault();
       if (phase == 0)
